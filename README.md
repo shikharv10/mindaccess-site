@@ -1,1 +1,0 @@
-# mindaccess-site
