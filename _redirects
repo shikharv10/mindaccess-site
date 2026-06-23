@@ -1,0 +1,44 @@
+# Cloudflare Pages redirects file
+# Format: <from> <to> <status>
+# 301 = permanent redirect (preserves SEO link equity)
+# Order matters: first match wins. Most specific rules first, wildcards last.
+
+# ─────────────────────────────────────────────────────────────────────
+# CANONICAL DOMAIN
+# Force non-www to match the existing canonical (https://mindaccess.in/).
+# The live WordPress site canonicalizes to non-www; we must match that
+# to avoid duplicate-content signals.
+# ─────────────────────────────────────────────────────────────────────
+https://www.mindaccess.in/* https://mindaccess.in/:splat 301!
+
+# ─────────────────────────────────────────────────────────────────────
+# OLD WORDPRESS PAGES with no equivalent in the new site
+# Decided in planning: FAQ pages consolidated into /faq/,
+# practices index → homepage (which already lists all practices).
+# ─────────────────────────────────────────────────────────────────────
+/hypnosis-and-hypnotherapy-faqs/ /faq/ 301
+/past-life-regression-faqs/ /faq/ 301
+/hypnotherapy-practices/ / 301
+
+# ─────────────────────────────────────────────────────────────────────
+# WORDPRESS INFRASTRUCTURE URLs
+# These exist in the WP install but shouldn't on a static site.
+# Redirect blog/feed paths to the new stories index; block admin paths.
+# ─────────────────────────────────────────────────────────────────────
+/blog/ /hypnotherapy-stories/ 301
+/feed/ /hypnotherapy-stories/ 301
+/feed/rss/ /hypnotherapy-stories/ 301
+/comments/feed/ /hypnotherapy-stories/ 301
+
+# Block any leftover WordPress admin/login probes (security + 404 hygiene)
+/wp-admin/* / 404
+/wp-login.php / 404
+/wp-json/* / 404
+/xmlrpc.php / 404
+
+# ─────────────────────────────────────────────────────────────────────
+# NOTE: Individual blog posts at /experiences/* and /mind-access-blog/*
+# are NOT listed here because they are being ported as actual pages
+# with the same URLs. If any post is later removed, add a 301 here
+# pointing to /hypnotherapy-stories/ or the closest topical page.
+# ─────────────────────────────────────────────────────────────────────
