@@ -764,10 +764,16 @@
         /* ===== PRACTICES GRID ===== */
         .practices-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        @media (max-width: 1100px) {
+            .practices-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .practice-card {
@@ -777,6 +783,13 @@
             box-shadow: 0 2px 12px rgba(74, 26, 107, 0.08);
             transition: all 0.3s ease;
             border-top: 4px solid #E8D5F5;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .practice-card .learn-more {
+            margin-top: auto;
+            align-self: flex-start;
         }
 
         .practice-card:hover {
@@ -1562,6 +1575,8 @@
                     <a href="https://mindaccess.in/ancestral-healing/">Ancestral Healing</a>
                     <a href="https://mindaccess.in/surrogate-healing/">Surrogate Healing</a>
                     <a href="https://mindaccess.in/chakra-healing/">Chakra Healing</a>
+                    <a href="https://mindaccess.in/space-healing/">Space Healing</a>
+                    <a href="https://mindaccess.in/family-relationship-healing/">Family &amp; Relationship Healing</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -1872,6 +1887,27 @@
                 <p>Balance your energy centers to restore physical, emotional, and spiritual vitality.</p>
                 <a href="https://mindaccess.in/chakra-healing/" class="learn-more">Learn more</a>
             </div>
+
+            <div class="practice-card">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 48 L50 26 L75 48 M32 42 L32 74 L68 74 L68 42" stroke="#4A1A6B" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                    <path d="M50 64 Q42 56 50 46 Q58 56 50 64 Z" stroke="#4A1A6B" stroke-width="1.5" fill="none"/>
+                </svg>
+                <h3>Space Healing</h3>
+                <p>Clear heavy, stagnant energy from your home or workplace and restore calm, safety and flow.</p>
+                <a href="https://mindaccess.in/space-healing/" class="learn-more">Learn more</a>
+            </div>
+
+            <div class="practice-card">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="50" r="16" stroke="#4A1A6B" stroke-width="2" fill="none"/>
+                    <circle cx="60" cy="50" r="16" stroke="#4A1A6B" stroke-width="2" fill="none"/>
+                    <path d="M50 44 Q53 50 50 56 Q47 50 50 44 Z" stroke="#4A1A6B" stroke-width="1.5" fill="none"/>
+                </svg>
+                <h3>Family &amp; Relationship Healing</h3>
+                <p>Heal the patterns between partners, parents and children, and restore understanding and trust.</p>
+                <a href="https://mindaccess.in/family-relationship-healing/" class="learn-more">Learn more</a>
+            </div>
         </div>
     </section>
 
@@ -1884,7 +1920,6 @@
             <a href="https://mindaccess.in/entity-de-possession/" class="pill">Entity De-Possession</a>
             <a href="https://mindaccess.in/ancestral-healing/" class="pill">Ancestral Healing</a>
             <a href="https://mindaccess.in/surrogate-healing/" class="pill">Surrogate Healing</a>
-            <a href="https://mindaccess.in/hypnotherapy-contact/" class="pill">Space Healing</a>
         </div>
     </section>
 
@@ -2142,6 +2177,8 @@
                     <li><a href="https://mindaccess.in/future-life-progression/">Future Life Progression</a></li>
                     <li><a href="https://mindaccess.in/inner-child-healing/">Inner Child Healing</a></li>
                     <li><a href="https://mindaccess.in/chakra-healing/">Chakra Healing</a></li>
+                    <li><a href="https://mindaccess.in/space-healing/">Space Healing</a></li>
+                    <li><a href="https://mindaccess.in/family-relationship-healing/">Family &amp; Relationship Healing</a></li>
                     <li><a href="https://mindaccess.in/surrogate-healing/">Surrogate Healing</a></li>
                 </ul>
             </div>
